@@ -7,7 +7,7 @@ print(txt[-10:])
 '''текст из нескольких строчек 
 превращаем в одну строчку'''
 txt = ''
-with open('text_rows_rus.txt') as f:
+with open('text_rows_rus.txt', encoding='utf-8') as f:
     for line in f:
         txt += line.strip()
 print(txt)
