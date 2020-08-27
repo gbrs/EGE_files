@@ -1,3 +1,4 @@
+'''выводим 20 50 80'''
 lst = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
 for i in range(2, 10, 3):
     print(lst[i], end=' ')
@@ -12,8 +13,14 @@ for i in range(20, 100, 30):
 print()
 
 
+'''суммируем все элементы списка'''
 s = 0
 for i in range(10):
+    s += lst[i]
+print(s)
+
+s = 0
+for i in range(len(lst)):
     s += lst[i]
 print(s)
 

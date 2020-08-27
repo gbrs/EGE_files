@@ -52,3 +52,6 @@ print()
 
 lst_copy = lst[:]
 print(lst_copy)
+
+lst_copy_reversed = lst[::-1]
+print(lst_copy_reversed)

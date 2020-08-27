@@ -27,9 +27,10 @@ lst = []
 with open('numbers_column.txt') as f:
     for line in f:
         lst.append(line.strip())
+print(lst[:5])
 lst = lst[2:]
 lst = list(map(int, lst))
-print(lst[-5:])
+print(lst[:4])
 
 
 '''чтение пар чисел, каждая из которых в своей строке'''
@@ -39,5 +40,6 @@ with open('numbers_columns_small.txt') as f:
         pair = line.strip().split()
         pair = list(map(int, pair))
         lst.append(pair)
-lst = lst[1:]
-print(lst[-3:])
+print(lst[:5])
+lst.pop(0)
+print(lst[:4])
