@@ -5,7 +5,7 @@ print(txt[-10:])
 
 
 '''текст из нескольких строчек 
-превращаем в одну строчку'''
+превращаем в одну сплошную строчку'''
 txt = ''
 with open('text_rows_rus.txt', encoding='utf-8') as f:
     for line in f:
@@ -14,6 +14,15 @@ print(txt)
 txt = txt[1:]
 print(txt)
 
+'''текст из нескольких строчек 
+превращаем в одну строчку через пробел'''
+txt = ''
+with open('text_rows_rus.txt', encoding='utf-8') as f:
+    for line in f:
+        txt += line.strip() + ' '
+print(txt)
+txt = txt[1:]
+print(txt)
 
 '''чтение чисел, идущих через запятую, из строки'''
 with open('numbers_row') as f:
