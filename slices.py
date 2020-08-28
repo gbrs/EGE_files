@@ -3,11 +3,13 @@ print('СРЕЗЫ:')
 print(txt[1:7])
 print(txt[1:2])
 print(txt[0:-1])
+print()
 
 print('ШАГИ:')
 print(txt[-1:-3:-1])
 print(txt[1:7:2])
 print(txt[1::2])
+print()
 
 print('?:')
 print(txt[1:1])

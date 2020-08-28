@@ -29,7 +29,7 @@ lst1.pop(0)  # возвращает попнутое число
 print(lst1)
 lst1.pop()
 print(lst1)
-lst1.remove(4)
+lst1.remove(4)  # первую четверку удалит
 print(lst1)
 print('вставка на позицию 1:')
 lst1.insert(1, 'вставка')

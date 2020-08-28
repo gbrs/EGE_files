@@ -1,5 +1,3 @@
-txt = ''
-with open('ahmadulina.txt', encoding='utf-8') as f:
-    for line in f:
-        txt += line.strip() + ' '
-print(txt.split())
+a = 9/4
+b = 13.5/6
+print(a is b)

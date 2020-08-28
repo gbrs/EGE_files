@@ -7,8 +7,8 @@ print('конкатенация:')
 print(string1 + string2)
 print(string3 + string4)
 print('-=-'.join([string1, string3, string2, string4]))
-
 print()
+
 print('методы строк:')
 print(string1)
 print(string1.strip())

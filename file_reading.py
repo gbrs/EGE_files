@@ -1,15 +1,14 @@
-'''текст в одну строчку'''
+'''считывание текста записанного в одну строчку'''
 with open('text_row.txt') as f:
     txt = f.read()
 print(txt[-10:])
-
 
 '''текст из нескольких строчек 
 превращаем в одну сплошную строчку'''
 txt = ''
 with open('text_rows_rus.txt', encoding='utf-8') as f:
-    for line in f:
-        txt += line.strip()
+    for i in f:
+        txt += i.strip()
 print(txt)
 txt = txt[1:]
 print(txt)
@@ -24,12 +23,24 @@ print(txt)
 txt = txt[1:]
 print(txt)
 
+'''текст из нескольких строчек превращаем в одну строчку через пробел,
+а затем превращаем в список слов'''
+txt = ''
+with open('ahmadulina.txt', encoding='utf-8') as f:
+    for line in f:
+        txt += line.strip() + ' '
+txt = txt.lower()
+for i in ('.', ',', ';', ':', '—', '?', '!'):
+    txt = txt.replace(i, '')
+lst_ahmadulina = txt.split()
+print(lst_ahmadulina[:10])
+print()
+
 '''чтение чисел, идущих через запятую, из строки'''
 with open('numbers_row') as f:
     lst = f.read().strip().split(',')
     lst = list(map(int, lst))
 print(lst[-5:])
-
 
 '''чтение чисел, каждое из которых в своей строке'''
 lst = []

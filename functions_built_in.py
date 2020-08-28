@@ -27,6 +27,6 @@ lst_str = list(reversed(lst_str))
 print(lst_str)
 print()
 
-print(help([].pop))
+help([].pop)
 print(dir(str))
 print(dir(list))
