@@ -45,8 +45,14 @@ print(lst[-5:])
 '''чтение чисел, каждое из которых в своей строке'''
 lst = []
 with open('numbers_column.txt') as f:
+    # или просто lst = f.read().strip().split()
     for line in f:
         lst.append(line.strip())
+    '''или сразу в целые переводить:
+    a, b = f.readline().split()  # считываем первую необычную строку
+    for line in f:  # читаются все остальные строки
+        lst.append(int(line.strip()))
+    '''
 print(lst[:5])
 lst = lst[2:]
 lst = list(map(int, lst))
@@ -56,6 +62,8 @@ print(lst[:4])
 '''чтение пар чисел, каждая из которых в своей строке'''
 lst = []
 with open('numbers_columns_small.txt') as f:
+    # или просто lst = f.read().strip().split(),
+    # но тогда это будет просто массив из чисел
     for line in f:
         pair = line.strip().split()
         pair = list(map(int, pair))

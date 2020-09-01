@@ -1,25 +1,13 @@
-# number = '8' * 88
-# print(number)
-
-
-# txt = ''
-# with open('caroll.txt', encoding='utf-8') as f:
-#     for line in f:
-#         txt += line.strip() + ' '
-# for i in ('.', ',', ';', ':', '—', '?', '!', "'", '-'):
-#     txt = txt.replace(i, '')
-# print(txt[:100].lower())
-# print(list(txt[:100].lower().split()))
-
-def F(n):
-    if n > 2:
-        return F(n-1) + G(n-2)
-    else:
-        return 2
-def G(n):
-    if n > 2:
-        return G(n-1) + F(n-2)
-    else:
-        return 2
-
-print(F(20))
+'''чтение чисел, каждое из которых в своей строке'''
+lst = []
+with open('numbers_column.txt') as f:
+    # или просто lst = f.read().strip().split()
+    # for line in f:
+    #     lst.append(line.strip())
+    a, b = f.readline().split()
+    for line in f:
+        lst.append(int(line.strip()))
+print(lst[:5])
+lst = lst[1:]
+lst = list(map(int, lst))
+print(lst[:4])
