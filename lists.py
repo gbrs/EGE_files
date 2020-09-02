@@ -71,7 +71,7 @@ print(list3)
 
 string5 = 'раз два три четыре пять раз два'
 print('преобразование строки в список слов:')
-list5 = list(string5.split())
+list5 = string5.split()
 print(list5)
 print('множество (элементы не повторяются):')
 set5 = set(list5)

@@ -30,3 +30,22 @@ for i in lst:
 print(s)
 
 print(sum(lst))
+
+for i in 'hello world':
+    if i == 'o':
+        continue
+    print(i * 2, end='')
+print()
+
+for i in 'hello world':
+    if i == 'o':
+        break
+    print(i * 2, end='')
+print()
+
+for i in 'hello world':
+    if i == 'a':
+        break
+    print(i * 2, end='')
+else:
+    print('\n', 'Буквы a в строке нет', sep='')
