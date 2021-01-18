@@ -20,7 +20,6 @@ lst.sort()
 
 # суммируем элементы пока их сумма sm меньше заданного s
 sm = 0
-mx_i = 1
 for i in range(n):
     if sm + lst[i] <= s:
         sm += lst[i]
